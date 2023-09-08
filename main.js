@@ -1,7 +1,6 @@
 const fullDate = document.getElementById("fullDate");
 const UTCTime = document.getElementById("utcTime");
 
-
 const days = [
   "Sunday",
   "Monday",
@@ -26,7 +25,6 @@ const months = [
   "December",
 ];
 
-
 const d = new Date();
 
 let day = days[d.getDay()];
@@ -35,46 +33,38 @@ let month = months[d.getMonth()];
 let year = d.getFullYear();
 
 let dayWithSuffix;
-if (day => 11 && day <= 13) {
-    dayWithSuffix = dayNo + 'th';
+if ((day) => 11 && day <= 13) {
+  dayWithSuffix = dayNo + "th";
 } else {
-    switch (day % 10) {
-        case 1:
-            dayWithSuffix = dayNo + 'st';
-            break;
-        case 2:
-            dayWithSuffix = dayNo + 'nd';
-            break;
-        case 3:
-            dayWithSuffix = dayNo + 'rd';
-            break;
-        default:
-            dayWithSuffix = dayNo + 'th';
-    }
+  switch (day % 10) {
+    case 1:
+      dayWithSuffix = dayNo + "st";
+      break;
+    case 2:
+      dayWithSuffix = dayNo + "nd";
+      break;
+    case 3:
+      dayWithSuffix = dayNo + "rd";
+      break;
+    default:
+      dayWithSuffix = dayNo + "th";
+  }
 }
 
-fullDate.innerHTML = `${day}, ${dayWithSuffix} of ${month}, ${year}.`;
+// fullDate.innerHTML = `${day}, ${dayWithSuffix} of ${month}, ${year}.`;
+fullDate.innerHTML = day;
 
+const milliseconds = d.getUTCMilliseconds();
 
-const currentTimeMillis = Date.now();
-
-UTCTime.innerHTML = currentTimeMillis;
-
-
+UTCTime.innerHTML = milliseconds;
 
 // const currentDate = new Date();
 // const milliseconds = currentDate.getUTCMilliseconds();
 // console.log(milliseconds);
 
-
 // const currentDate = new Date();
 // const currentTimeInMillis = currentDate.getTime();
 // console.log(currentTimeInMillis);
-
-
-
-
-
 
 // A shorter way to write this instead of writting all the days of the week and the months in a year
 
