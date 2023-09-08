@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>HNG Profile Card</title>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-top">
+            <img src="./img/slackProfilePic.jpg" data-testid="slackDisplayImage" alt="Oluwatobiloba Abodunde">
+        </div>
+        <div class="card-bottom">
+
+            <h1 data-testid="slackUserName">OLUWATOBILOBA ABODUNDE</h1>
+            <p data-testid="myTrack">Front-End Web Development</p>
+
+            <hr>
+
+            <p id = "fullDate" data-testid="currentDayOfTheWeek">Mon, 25th of september, 2023.</p>
+            <p id = "utcTime" data-testid="currentUTCTime"></p>
+            <i class="fa-brands fa-github" data-testid=“githubURL”></i>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
